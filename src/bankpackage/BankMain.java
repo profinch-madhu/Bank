@@ -1,6 +1,7 @@
 package bankpackage;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class BankMain {
@@ -72,7 +73,8 @@ public class BankMain {
                 a1.debit(a);
                 System.out.println("Debited: "+a);
                 System.out.println("Balance: "+a1.getAmount());
-                transaction.add("debited : "+a+" balance: "+a1.getAmount());
+                Date d1 = new Date();
+                transaction.add(" Date: " + d1+" | debited : "+a+" | balance: "+a1.getAmount());
                 break;
 
             case 4:
@@ -82,7 +84,8 @@ public class BankMain {
                 a1.credit(b);
                 System.out.println("credited: "+b);
                 System.out.println("Balance: "+a1.getAmount());
-                transaction.add("credited : "+b+" balance: "+a1.getAmount());
+                Date d2 = new Date();
+                transaction.add(" Date: " + d2+" | credited : "+b+" | balance: "+a1.getAmount());
                 break;
 
             case 5:
@@ -99,6 +102,6 @@ public class BankMain {
                 System.out.println("Please enter the correct choice");
 
         }
-    }while(choice!=5);
+    }while(choice!=6);
     }
 }
